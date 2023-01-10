@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Details</title>
+  </head>
+  <body>
+    <form action="./action.html">
+      <fieldset>
+        <legend><h1>Personal Details</h1></legend>
+        <p>
+          <label>
+            Salutation
+            <br />
+            <select name="salutation">
+              <option>--none--</option>
+              <option>Mr.</option>
+              <option>Ms.</option>
+              <option>Mrs.</option>
+              <option>Dr.</option>
+              <option>Prof.</option>
+            </select>
+          </label>
+        </p>
+
+        <p>
+          <label>First name: <input name="firstName" /> </label>
+        </p>
+        <p>
+          <label>Last name: <input name="lastName" /> </label>
+        </p>
+
+        <p>
+          <label>Email: <input name="email" type="email" /> </label>
+        </p>
+
+        <p>
+          Gender:
+          <label><input type="radio" name="gender" value="male" />Male </label>
+          <label
+            ><input type="radio" name="gender" value="female" />Female
+          </label>
+        </p>
+
+        <p>
+          <label>Date of Birth: <input type="date" name="dob" /> </label>
+        </p>
+
+        <p>
+          <label
+            >Address:
+            <br />
+            <textarea name="address" color="25" rows="3"></textarea>
+          </label>
+        </p>
+        <form
+          action="file_upload.php"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <h2>Upload Files</h2>
+
+          <p>
+            Select files to upload:
+
+            <!-- name of the input fields are going to
+                be used in our php script-->
+            <input type="file" name="files[]" multiple />
+
+            <br /><br />
+
+            <input type="submit" name="submit" value="Upload" />
+          </p>
+        </form>
+
+        <form>
+          <input type="checkbox" id="box1" />
+          <label for="box1"
+            >Yes, I would also like to receive letters by post.</label
+          >
+        </form>
+        <br />
+
+        <p>
+          <button type="submit">Submit</button>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>
